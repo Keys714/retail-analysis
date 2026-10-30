@@ -1,6 +1,34 @@
 # 电商零售用户分析与复购预测
 
-> 个人数据科学作品集项目：基于 54.2 万条真实交易明细，完成数据清洗、业务分析、RFM 客户分层、复购预测和 Streamlit 交互看板。
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-3.1-150458?logo=pandas&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.9-F7931E?logo=scikitlearn&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.66-FF4B4B?logo=streamlit&logoColor=white)
+
+> 用 54 万条真实交易数据，完成从数据清洗、业务分析、RFM 客户分层、复购预测到交互看板的完整数据科学项目。
+
+**30 秒了解项目**
+
+- 清洗 54.2 万条交易 → 52.3 万条有效商品销售
+- 商品销售额 1,024.8 万，订单 19,773 笔，客户 4,334 人
+- 英国贡献 85.14% 销售额，Top 10% 客户贡献 61.37%
+- 复购模型时间外测试 AUC 0.728，Top 10% 精确率 96.0%
+- 交付 5 张图表、完整报告、Streamlit 看板
+
+[核心结果](#核心结果) · [图表](#图表) · [快速开始](#快速开始) · [复购模型](#复购模型) · [完整报告](reports/analysis_report.md) · [简历描述](docs/resume_bullets.md)
+
+> 不想跑代码？直接看 [完整分析报告](reports/analysis_report.md) 和 [图表目录](reports/figures/)。
+
+## 面试官快速看
+
+| 想看什么 | 去哪里 |
+|---|---|
+| 核心结论与业务建议 | [完整分析报告](reports/analysis_report.md) |
+| 清洗口径与代码 | [src/cleaning.py](src/cleaning.py) |
+| 复购模型 | [src/repurchase.py](src/repurchase.py) |
+| 交互看板 | [app/dashboard.py](app/dashboard.py) |
+| 简历项目描述 | [docs/resume_bullets.md](docs/resume_bullets.md) |
+| 面试追问准备 | [docs/interview_qa.md](docs/interview_qa.md) |
 
 ## 项目亮点
 
@@ -86,28 +114,49 @@ retail-analysis/
 
 ## 快速开始
 
-### 1. 创建环境
+### 1. 克隆并创建环境
 
 ```bash
-cd D:/ds-portfolio/retail-analysis
-py -3.12 -m venv .venv
+git clone <your-repo-url>
+cd retail-analysis
 
-# Git Bash
-source .venv/Scripts/activate
-
-pip install -r requirements.txt
+# macOS / Linux 用 python3.12；Windows 也可以用 py -3.12
+python3.12 -m venv .venv
 ```
 
-PowerShell 激活命令为 `.venv\Scripts\Activate.ps1`。
+激活虚拟环境：
+
+```bash
+# macOS / Linux
+source .venv/bin/activate
+
+# Windows Git Bash
+source .venv/Scripts/activate
+
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+```
+
+安装依赖：
+
+```bash
+pip install -r requirements.txt
+```
 
 ### 2. 下载数据
 
 ```bash
+mkdir -p data/raw
 curl -L -o "data/raw/online_retail.zip" \
   "https://archive.ics.uci.edu/static/public/352/online+retail.zip"
 ```
 
-解压后确认文件为 `data/raw/Online Retail.xlsx`。原始数据不提交到 Git。
+解压得到 `data/raw/Online Retail.xlsx`：
+
+- macOS / Linux / Git Bash：`unzip data/raw/online_retail.zip -d data/raw/`
+- Windows PowerShell：`Expand-Archive data/raw/online_retail.zip -DestinationPath data/raw/`
+
+原始数据不提交到 Git。
 
 ### 3. 运行流水线
 
