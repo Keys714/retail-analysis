@@ -1,0 +1,48 @@
+{
+  "raw_rows": 541909,
+  "duplicate_rows": 5268,
+  "rows_after_dedup": 536641,
+  "sales": {
+    "rows": 522569,
+    "invoices": 19773,
+    "customers": 4334,
+    "products": 3913,
+    "countries": 38,
+    "revenue": 10247907.68,
+    "date_min": "2010-12-01 08:26:00",
+    "date_max": "2011-12-09 12:50:00"
+  },
+  "cancellations": {
+    "rows": 9251,
+    "invoices": 3836,
+    "revenue": -893979.73,
+    "product_revenue_abs": 475901.16
+  },
+  "adjustments": {
+    "rows": 1336,
+    "invoices": 1336
+  },
+  "service_fees": {
+    "rows": 2309,
+    "revenue": 394203.12,
+    "codes": [
+      "AMAZONFEE",
+      "B",
+      "BANK CHARGES",
+      "C2",
+      "DOT",
+      "M",
+      "PADS",
+      "POST",
+      "S"
+    ]
+  },
+  "quality": {
+    "missing_customer_rows": 135037,
+    "missing_customer_rate_pct": 25.16,
+    "anonymous_sales_share_pct": 14.74,
+    "non_positive_price_rows": 2512,
+    "return_rate_revenue_pct": 4.44,
+    "cancelled_invoice_rate_pct": 16.25
+  }
+}

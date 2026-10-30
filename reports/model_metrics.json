@@ -1,0 +1,164 @@
+{
+  "train": {
+    "snapshot": "2011-06-09 00:00:00",
+    "customers": 2625,
+    "positive_rate": 0.499
+  },
+  "test": {
+    "snapshot": "2011-09-09 00:00:00",
+    "customers": 2775,
+    "positive_rate": 0.6151
+  },
+  "feature_count": 23,
+  "results": [
+    {
+      "model": "逻辑回归",
+      "threshold": 0.5,
+      "roc_auc": 0.7281,
+      "pr_auc": 0.8242,
+      "accuracy": 0.6479,
+      "precision": 0.7911,
+      "recall": 0.5811,
+      "f1": 0.67,
+      "confusion_matrix": [
+        [
+          806,
+          262
+        ],
+        [
+          715,
+          992
+        ]
+      ],
+      "top_10pct": {
+        "k_pct": 10.0,
+        "n_selected": 277,
+        "precision": 0.9603,
+        "recall": 0.1558,
+        "lift": 1.5611
+      },
+      "top_20pct": {
+        "k_pct": 20.0,
+        "n_selected": 555,
+        "precision": 0.9081,
+        "recall": 0.2953,
+        "lift": 1.4763
+      },
+      "cv_auc_mean": 0.7563,
+      "cv_auc_std": 0.0252
+    },
+    {
+      "model": "梯度提升树",
+      "threshold": 0.5,
+      "roc_auc": 0.7006,
+      "pr_auc": 0.805,
+      "accuracy": 0.6364,
+      "precision": 0.7648,
+      "recall": 0.5905,
+      "f1": 0.6664,
+      "confusion_matrix": [
+        [
+          758,
+          310
+        ],
+        [
+          699,
+          1008
+        ]
+      ],
+      "top_10pct": {
+        "k_pct": 10.0,
+        "n_selected": 277,
+        "precision": 0.9531,
+        "recall": 0.1547,
+        "lift": 1.5494
+      },
+      "top_20pct": {
+        "k_pct": 20.0,
+        "n_selected": 555,
+        "precision": 0.8973,
+        "recall": 0.2917,
+        "lift": 1.4587
+      },
+      "cv_auc_mean": 0.7175,
+      "cv_auc_std": 0.0222
+    },
+    {
+      "model": "基线：近期购买规则",
+      "roc_auc": 0.6584,
+      "pr_auc": 0.7281,
+      "top_10pct": {
+        "k_pct": 10.0,
+        "n_selected": 277,
+        "precision": 0.7762,
+        "recall": 0.126,
+        "lift": 1.2618
+      },
+      "top_20pct": {
+        "k_pct": 20.0,
+        "n_selected": 555,
+        "precision": 0.7694,
+        "recall": 0.2501,
+        "lift": 1.2507
+      }
+    },
+    {
+      "model": "基线：多数类",
+      "accuracy": 0.6151,
+      "positive_rate_test": 0.6151
+    }
+  ],
+  "best_model": "逻辑回归",
+  "feature_importance_top10": [
+    {
+      "feature": "purchase_days",
+      "importance_mean": 0.25378865170733417,
+      "importance_std": 0.0028843905978791005
+    },
+    {
+      "feature": "frequency",
+      "importance_mean": 0.2494673836965656,
+      "importance_std": 0.004204145828189596
+    },
+    {
+      "feature": "tenure_days",
+      "importance_mean": 0.18307399142986905,
+      "importance_std": 0.0031225820138438584
+    },
+    {
+      "feature": "avg_basket_lines",
+      "importance_mean": 0.048910632359813855,
+      "importance_std": 0.0038464130946963323
+    },
+    {
+      "feature": "recent_90d_frequency",
+      "importance_mean": 0.04293710190908109,
+      "importance_std": 0.0038981340571720463
+    },
+    {
+      "feature": "avg_gap_days",
+      "importance_mean": 0.033795958040147525,
+      "importance_std": 0.003349073363484143
+    },
+    {
+      "feature": "recency_days",
+      "importance_mean": 0.03125168670971481,
+      "importance_std": 0.0028283180519942264
+    },
+    {
+      "feature": "avg_order_value",
+      "importance_mean": 0.03045753440887815,
+      "importance_std": 0.0028592135571745593
+    },
+    {
+      "feature": "is_one_time",
+      "importance_mean": 0.0250731181804817,
+      "importance_std": 0.0033266719479091
+    },
+    {
+      "feature": "cancel_count",
+      "importance_mean": 0.017645232562986956,
+      "importance_std": 0.0012525395873900311
+    }
+  ]
+}

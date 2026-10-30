@@ -1,0 +1,19 @@
+{
+  "revenue": 10247907.68,
+  "orders": 19773,
+  "customers": 4334,
+  "products": 3913,
+  "aov": 518.2778374551156,
+  "revenue_per_customer": 2364.5379972311953,
+  "avg_items_per_order": 281.26323774844485,
+  "avg_lines_per_order": 26.42841248166692,
+  "repeat_rate_pct": 65.27457314259345,
+  "top10_customer_share_pct": 61.374775740649,
+  "uk_share_pct": 85.14061896779303,
+  "top20_product_share_pct": 78.83123806595417,
+  "return_rate_pct": 4.44,
+  "cancelled_invoice_rate_pct": 16.25,
+  "anonymous_sales_share_pct": 14.74,
+  "date_min": "2010-12-01 08:26:00",
+  "date_max": "2011-12-09 12:50:00"
+}
