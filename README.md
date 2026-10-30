@@ -19,8 +19,6 @@
 
 > 不想跑代码？直接看 [完整分析报告](reports/analysis_report.md) 和 [图表目录](reports/figures/)。
 
-## 面试官快速看
-
 | 想看什么 | 去哪里 |
 |---|---|
 | 核心结论与业务建议 | [完整分析报告](reports/analysis_report.md) |
