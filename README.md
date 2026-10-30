@@ -145,10 +145,19 @@ pip install -r requirements.txt
 
 ### 2. 下载数据
 
+**Git Bash / macOS / Linux：**
+
 ```bash
 mkdir -p data/raw
 curl -L -o "data/raw/online_retail.zip" \
   "https://archive.ics.uci.edu/static/public/352/online+retail.zip"
+```
+
+**Windows PowerShell：**
+
+```powershell
+New-Item -ItemType Directory -Force data/raw | Out-Null
+Invoke-WebRequest -Uri "https://archive.ics.uci.edu/static/public/352/online+retail.zip" -OutFile "data/raw/online_retail.zip"
 ```
 
 解压得到 `data/raw/Online Retail.xlsx`：
